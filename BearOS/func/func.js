@@ -2,7 +2,7 @@
 
 
 
-function threadCount(ns, hostname, scriptRam) {
+export function threadCount(ns, hostname, scriptRam) {
     let threads = 1;
     let free_ram = ns.getServerMaxRam(hostname) - ns.getServerUsedRam(hostname)
 
