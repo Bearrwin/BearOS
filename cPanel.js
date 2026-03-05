@@ -1,8 +1,10 @@
 /**
- * Main script : Handle the UI and launching sub-script
+	Creits:
+		- This is based in part on ScorpionOS sontrol pad - Thanks.
+		- Much help was given along the way from the Denizens of Discord - Thanks
  * @param {NS} ns
- */
-import { scanAll } from "ScorpionOS/tools/utils.js";
+  */
+
 
 export async function main(ns) {
 
