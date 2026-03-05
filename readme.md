@@ -1,0 +1,1 @@
+Welcome to my github for BearOS, a collection of bbitburner scripts to provide a control panel to execute the included scripts and provide a dashboard to centralise various bits of informantion about your game.
