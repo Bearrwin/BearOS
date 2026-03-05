@@ -3,16 +3,15 @@
 		- This is one of Alains scripts modified for my repositry and well beyond me to write - Thanks.
  */
 
-
 let options;
 const argsSchema = [
     ['github', 'Bearrwin'],
     ['repository', 'BearOS'],
-    ['branch', 'Main'],
+    ['branch', 'main'],
     ['download', []], // By default, all supported files in the repository will be downloaded. Override with just a subset of files here
     ['new-file', []], // If a repository listing fails, only files returned by ns.ls() will be downloaded. You can add additional files to seek out here.
     ['subfolder', ''], // Can be set to download to a sub-folder that is not part of the remote repository structure
-    ['extension', ['.js', '.ns', '.txt', '.script', '.png']], // Files to download by extension
+    ['extension', ['.js', '.ns', '.txt', '.script', ".png"]], // Files to download by extension
     ['omit-folder', ['/Temp/']], // Folders to omit
 ];
 
