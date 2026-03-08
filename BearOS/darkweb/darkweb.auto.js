@@ -1,11 +1,14 @@
 /** @param {NS} ns */
 export async function main(ns) {
-
+	
+	ns.ui.openTail();
+	//ns.disableLog('ALL');
+	ns.ui.resizeTail(300, 130);
+	ns.ui.moveTail(1225, 485);
 
 	if (!ns.hasTorRouter()) {
-		ns.singularity.purchaseTor()
+		ns.singularity.purchaseTor();
 	}
-
 
 	if (!ns.fileExists("BruteSSH.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("BruteSSH.exe")) {
 		ns.singularity.purchaseProgram("BruteSSH.exe");
@@ -13,7 +16,7 @@ export async function main(ns) {
 	if (!ns.fileExists("FTPCrack.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("FTPCrack.exe")) {
 		ns.singularity.purchaseProgram("FTPCrack.exe");
 	}
-	if (!ns.fileExists("relaySMTP.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("")) {
+	if (!ns.fileExists("relaySMTP.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("relaySMTP.exe")) {
 		ns.singularity.purchaseProgram("relaySMTP.exe");
 	}
 	if (!ns.fileExists("HTTPWorm.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("HTTPWorm.exe")) {
@@ -23,7 +26,7 @@ export async function main(ns) {
 		ns.singularity.purchaseProgram("SQLInject.exe");
 	}
 	if (!ns.fileExists("ServerProfiler.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("ServerProfiler.exe")) {
-		ns.singularity.purchaseProgram("ServerProfiler.exe")
+		ns.singularity.purchaseProgram("ServerProfiler.exe");
 	}
 	if (!ns.fileExists("DeepscanV1.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("DeepscanV1.exe")) {
 		ns.singularity.purchaseProgram("DeepscanV1.exe");
@@ -37,33 +40,5 @@ export async function main(ns) {
 	if (!ns.fileExists("Formulas.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("Formulas.exe")) {
 		ns.singularity.purchaseProgram("Formulas.exe");
 	}
-
-
-	// BruteSSH.exe - $500.000k - Opens up SSH Ports.
-
-	// FTPCrack.exe - $1.500m - Opens up FTP Ports.
-
-	// relaySMTP.exe - $5.000m - Opens up SMTP Ports.
-
-	// HTTPWorm.exe - $30.000m - Opens up HTTP Ports.
-
-	// SQLInject.exe - $250.000m - Opens up SQL Ports.
-
-	// ServerProfiler.exe - $500.000k - Displays detailed information about a server.
-
-	// DeepscanV1.exe - $500.000k - Enables 'scan-analyze' with a depth up to 5.
-
-	// DeepscanV2.exe - $25.000m - Enables 'scan-analyze' with a depth up to 10.
-
-	// AutoLink.exe - $1.000m - Enables direct connect via 'scan-analyze'.
-
-	// Formulas.exe - $5.000b - Unlock access to the formulas API.
-
-
-
-
-
-
-
 
 }

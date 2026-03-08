@@ -2,9 +2,9 @@
 import { npcList } from "BearOS/func/func.js";
 
 export async function main(ns) {
-	ns.disableLog("sleep")
-	ns.ui.openTail()
-	ns.moveTail(50, 50)
+	ns.disableLog("sleep");
+	ns.ui.openTail();
+	ns.moveTail(50, 50);
 	ns.resizeTail(500, 150)
 
 	let servers = npcList(ns).filter(s => !ns.hasRootAccess(s));
@@ -18,11 +18,10 @@ export async function main(ns) {
 			ns.httpworm(server)
 			ns.sqlinject(server)
 		} catch {}
-		await ns.sleep(50)
+		await ns.sleep(50);
 		try {
-			ns.nuke(server)
+			ns.nuke(server);
 		} catch {}
-		await ns.sleep(50)
-
+		await ns.sleep(50);
 	}
 }

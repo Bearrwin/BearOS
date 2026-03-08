@@ -110,7 +110,7 @@ export async function main(ns) {
 			ns.print("Home Solo");
 			ns.exit();
 			break;
-			await ns.sleep(1000)
+			await ns.sleep(1000);
 		}
 	}
 }
