@@ -4,7 +4,7 @@ import { npcList } from "BearOS/func/func.js";
 export async function main(ns) {
 	ns.disableLog("sleep");
 	ns.ui.openTail();
-	ns.moveTail(50, 50);
+	ns.ui.moveTail(50, 50);
 	ns.resizeTail(500, 150)
 
 	let servers = npcList(ns).filter(s => !ns.hasRootAccess(s));
