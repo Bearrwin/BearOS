@@ -7,9 +7,9 @@ export async function main(ns) {
 	ns.disableLog('ALL');
 
 	let currWork = ns.singularity.getCurrentWork()
-	let cloudQty = ns.peek(10010201)
-	let cloudSize = ns.peek(10010202)
-	
+		let cloudQty = ns.peek(10010201)
+		let cloudSize = ns.peek(10010202)
+
 		//let thisBN =
 		//let freshBN =
 
@@ -69,25 +69,42 @@ export async function main(ns) {
 	ns.run("BearOS/bot/bot.hacknet.sellhashes.js");
 	ns.run("BearOS/utils/selling.js");
 
-	if (ns.getPurchasedServers() < cloudQty {
+	while (ns.getServerMoneyAvailable("home") < 2500000) {
+		await ns.sleep(1000)
+	}
+
+	if (!ns.hasTorRouter()) {
+		ns.singularity.purchaseTor()
+	}
+
+	if (!ns.fileExists("BruteSSH.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("BruteSSH.exe")) {
+		ns.singularity.purchaseProgram("BruteSSH.exe");
+	}
+
+	if (!ns.fileExists("FTPCrack.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("FTPCrack.exe")) {
+		ns.singularity.purchaseProgram("FTPCrack.exe");
+	}
+
+	ns.run("BearOS/worm/worm.nuke.js");
+	await ns.sleep(10000);
+
+	ns.run("BearOS/worm/worm.killall.excepthome.js");
+	await ns.sleep(1000);
+
+	await ns.run("BearOS/worm/worm.wgh.nocrack.loop.npconly.js", 1, "n00dles");
+
+	if (ns.getPurchasedServers() < cloudQty) {
 		let sToBuy = cloudQty - ns.getPurchasedServers()
-			await ns.exec("BearOS/cloud/cloud.buy.loop.js", "home", 1, "S", 64, sToBuy, 20000)
+			ns.exec("BearOS/cloud/cloud.buy.loop.js", "home", 1, "S", 64, sToBuy, 5000)
+			while (ns.getPurchasedServers() < cloudQty) {
+			ns.print("Waiting on funds to servers")
+			await ns.sleep(10000);
+		}
 	}
 
 }
+
 /*
-while (ns.getServerMoneyAvailable("home") < (ns.singularity.getDarkwebProgramCost("BruteSSH.exe") + 200000)) {
-await ns.sleep(1000)
-}
-
-if (!ns.hasTorRouter()) {
-ns.singularity.purchaseTor()
-}
-
-if (!ns.fileExists("BruteSSH.exe", "home") && ns.getServerMoneyAvailable("home") > ns.singularity.getDarkwebProgramCost("BruteSSH.exe")) {
-ns.singularity.purchaseProgram("BruteSSH.exe");
-}
-
 ns.kill("/loop/combo.wgh.nocrack.loop.js", "home", "n00dles");
 
 

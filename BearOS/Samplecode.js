@@ -47,7 +47,9 @@ ns.write("/savedVar/newTarget.txt", "true", "w");
 		ns.print(moneyAvailable);
 
 }
-
+	red stop ⛔
+	stop⏹
+	go▶️
 
 	Red Dot
 	>🔴<

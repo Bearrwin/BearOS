@@ -1,5 +1,5 @@
 /** @param {NS} ns */
-import { npcList, threadMax } from "BearOS/func/func.js";
+import { threadMax } from "BearOS/func/func.js";
 
 export async function main(ns) {
 /* 
@@ -9,9 +9,9 @@ export async function main(ns) {
 	ns.disableLog('ALL');
  */
 	let target = ns.args[0];
-	let servers = npcList(ns);
+	let cloud = ns.getPurchasedServers()
 
-	for (let server of servers) {
+	for (let server of cloud) {
 		await ns.scp("BearOS/loop/combo.wgh.nocrack.loop.js", server, "home")
 		let available_threads = threadMax(ns, server, 2.8)
 			if (available_threads >= 1) {

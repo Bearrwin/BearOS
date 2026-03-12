@@ -6,13 +6,20 @@ export async function main(ns) {
 	ns.ui.moveTail(1225, 485);
 	ns.disableLog('ALL');
 
-	await ns.run("BearOS/init/init.reset.savedVar.js");
-	await ns.run("BearOS/init/init.get.BNMults.js");
-	await ns.run("BearOS/init/init.getSF.js");
-	await ns.run("BearOS/init/init.getBN.js");
-	await ns.run("BearOS/init/init.ports.js");
+	ns.run("BearOS/init/init.reset.savedVar.js");
+	await ns.sleep(1000)
+	ns.run("BearOS/init/init.get.BNMults.js");
+	await ns.sleep(1000)
+	ns.run("BearOS/init/init.getSF.js");
+	await ns.sleep(1000)
+	ns.run("BearOS/init/init.getBN.js");
+	await ns.sleep(1000)
+	ns.run("BearOS/init/init.useParam.js");
+	await ns.sleep(1000)
+	ns.run("BearOS/init/init.ports.js");
+	await ns.sleep(1000)
 	ns.run("BearOS/start.js");
 
-	ns.tprint("Initialisation complete, srting main operations.")
+	ns.tprint("Initialisation complete, starting main operations.")
 
 }
