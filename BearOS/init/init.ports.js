@@ -1,10 +1,10 @@
 /** @param {NS} ns */
 export async function main(ns) {
 
-	ns.ui.openTail();
-	ns.ui.resizeTail(300, 130);
-	ns.ui.moveTail(1225, 485);
-	ns.disableLog('ALL');
+	// ns.ui.openTail();
+	// ns.ui.resizeTail(300, 130);
+	// ns.ui.moveTail(1225, 485);
+	// ns.disableLog('ALL');
 
 	let _10010001 = ns.read("BearOS/savedVar/10010001.txt");
 	ns.clearPort(10010001);
@@ -16,17 +16,6 @@ export async function main(ns) {
 	ns.clearPort(10010003);
 	ns.writePort(10010003, _10010003);
 	
-	// Cloud info
-	
-	let _10010201 = ns.read("BearOS/savedVar/10010201.txt");
-	ns.clearPort(10010201);
-	ns.writePort(10010201, _10010201);
-	
-	let _10010202 = ns.read("BearOS/savedVar/10010202.txt");
-	ns.clearPort(10010202);
-	ns.writePort(10010202, _10010202);
-
-
 
 	// Source files
 
@@ -287,5 +276,11 @@ export async function main(ns) {
 
 	ns.clearPort(10010001)
 	ns.writePort(10010001, "true")
+	
+	
+	
+	whilw (true){
+		await ns.sleep(600000)		
+	}
 
 }
