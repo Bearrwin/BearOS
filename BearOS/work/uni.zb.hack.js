@@ -12,7 +12,7 @@ export async function main(ns) {
 
 	let currentCity = ns.getPlayer().city
 
-		if (currentCity == "Sector-12") {
-			ns.singularity.universityCourse("Rothman University", "Algorithms", false)
+		if (currentCity == "Volhaven") {
+			ns.singularity.universityCourse("ZB Institute of Technology", "Algorithms", false)
 		}
 }
