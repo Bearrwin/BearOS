@@ -271,6 +271,141 @@ export async function main(ns) {
 	let _10040013 = ns.read("BearOS/savedVar/10040013.txt");
 	ns.clearPort(10040013);
 	ns.writePort(10040013, _10040013);
+	
+	// Batcher ports
+	
+	// Batcher 1
+	
+		let _10020101 = ns.read("BearOS/savedVar/10020101.txt");
+	ns.clearPort(10020101);
+	ns.writePort(10020101, _10020101);
+	
+		let _10020102 = ns.read("BearOS/savedVar/10020102.txt");
+	ns.clearPort(10020102);
+	ns.writePort(10020102, _10020102);
+	
+		let _10020103 = ns.read("BearOS/savedVar/10020103.txt");
+	ns.clearPort(10020103);
+	ns.writePort(10020103, _10020103);
+	
+		let _10020104 = ns.read("BearOS/savedVar/10020104.txt");
+	ns.clearPort(10020104);
+	ns.writePort(10020104, _10020104);
+	
+		let _10020105 = ns.read("BearOS/savedVar/10020105.txt");
+	ns.clearPort(10020105);
+	ns.writePort(10020105, _10020105);
+	
+		let _10020106 = ns.read("BearOS/savedVar/10020106.txt");
+	ns.clearPort(10020106);
+	ns.writePort(10020106, _10020106);
+		
+	// Batcher 2
+	
+			let _10020201 = ns.read("BearOS/savedVar/10020201.txt");
+	ns.clearPort(10020201);
+	ns.writePort(10020201, _10020201);
+	
+		let _10020202 = ns.read("BearOS/savedVar/10020202.txt");
+	ns.clearPort(10020202);
+	ns.writePort(10020202, _10020202);
+	
+		let _10020203 = ns.read("BearOS/savedVar/10020203.txt");
+	ns.clearPort(10020203);
+	ns.writePort(10020203, _10020203);
+	
+		let _10020204 = ns.read("BearOS/savedVar/10020204.txt");
+	ns.clearPort(10020204);
+	ns.writePort(10020204, _10020204);
+	
+		let _10020205 = ns.read("BearOS/savedVar/10020205.txt");
+	ns.clearPort(10020205);
+	ns.writePort(10020205, _10020205);
+	
+		let _10020206 = ns.read("BearOS/savedVar/10020206.txt");
+	ns.clearPort(10020206);
+	ns.writePort(10020206, _10020206);
+	
+	// Batcher 3
+	
+			let _10020301 = ns.read("BearOS/savedVar/10020301.txt");
+	ns.clearPort(10020301);
+	ns.writePort(10020301, _10020301);
+	
+		let _10020302 = ns.read("BearOS/savedVar/10020302.txt");
+	ns.clearPort(10020302);
+	ns.writePort(10020302, _10020302);
+	
+		let _10020303 = ns.read("BearOS/savedVar/10020303.txt");
+	ns.clearPort(10020303);
+	ns.writePort(10020303, _10020303);
+	
+		let _10020304 = ns.read("BearOS/savedVar/10020304.txt");
+	ns.clearPort(10020304);
+	ns.writePort(10020304, _10020304);
+	
+		let _10020305 = ns.read("BearOS/savedVar/10020305.txt");
+	ns.clearPort(10020305);
+	ns.writePort(10020305, _10020305);
+	
+		let _10020306 = ns.read("BearOS/savedVar/10020306.txt");
+	ns.clearPort(10020306);
+	ns.writePort(10020306, _10020306);
+	
+	// Batcher 4
+	
+			let _10020401 = ns.read("BearOS/savedVar/10020401.txt");
+	ns.clearPort(10020401);
+	ns.writePort(10020401, _10020401);
+	
+		let _10020402 = ns.read("BearOS/savedVar/10020402.txt");
+	ns.clearPort(10020402);
+	ns.writePort(10020402, _10020402);
+	
+		let _10020403 = ns.read("BearOS/savedVar/10020403.txt");
+	ns.clearPort(10020403);
+	ns.writePort(10020403, _10020403);
+	
+		let _10020404 = ns.read("BearOS/savedVar/10020404.txt");
+	ns.clearPort(10020404);
+	ns.writePort(10020404, _10020404);
+	
+		let _10020405 = ns.read("BearOS/savedVar/10020405.txt");
+	ns.clearPort(10020405);
+	ns.writePort(10020405, _10020405);
+	
+		let _10020406 = ns.read("BearOS/savedVar/10020406.txt");
+	ns.clearPort(10020406);
+	ns.writePort(10020406, _10020406);
+	
+	// Batcher 5
+	
+			let _10020501 = ns.read("BearOS/savedVar/10020501.txt");
+	ns.clearPort(10020501);
+	ns.writePort(10020501, _10020501);
+	
+		let _10020502 = ns.read("BearOS/savedVar/10020502.txt");
+	ns.clearPort(10020502);
+	ns.writePort(10020502, _10020502);
+	
+		let _10020503 = ns.read("BearOS/savedVar/10020503.txt");
+	ns.clearPort(10020503);
+	ns.writePort(10020503, _10020503);
+	
+		let _10020504 = ns.read("BearOS/savedVar/10020504.txt");
+	ns.clearPort(10020504);
+	ns.writePort(10020504, _10020504);
+	
+		let _10020505 = ns.read("BearOS/savedVar/10020505.txt");
+	ns.clearPort(10020505);
+	ns.writePort(10020505, _10020505);
+	
+		let _10020506 = ns.read("BearOS/savedVar/10020506.txt");
+	ns.clearPort(10020506);
+	ns.writePort(10020506, _10020506);
+	
+	
+	
 
 	// Port init complete so go active
 
@@ -279,7 +414,7 @@ export async function main(ns) {
 	
 	
 	
-	whilw (true){
+	while (true){
 		await ns.sleep(600000)		
 	}
 

@@ -3,9 +3,6 @@
 10010002		Current BN
 10010003		Fresh BN
 
-10010201		Cloud max qty
-10010202		Cloud max size
-
 				Source files
 
 10010101		SF-1
@@ -89,3 +86,49 @@
 10010606		Stoxks
 10010607		IPV60
 10010608		Stanek
+
+
+				Batcher 1
+	
+10020101		Target
+10020102		Weak
+10020103		Grow
+10020104		Hack
+10020105		Delay
+10020106		Burst
+		
+				Batcher 2
+
+10020201		Target
+10020202		Weak
+10020203		Grow
+10020204		Hack
+10020205		Delay
+10020206		Burst
+		
+				Batcher 3
+		
+10020301		Target
+10020302		Weak
+10020303		Grow
+10020304		Hack
+10020305		Delay
+10020306		Burst
+		
+				Batcher 4
+		
+10020401		Target
+10020402		Weak
+10020403		Grow
+10020404		Hack
+10020405		Delay
+10020406		Burst
+		
+				Batcher 5
+	
+10020501		Target
+10020502		Weak
+10020503		Grow
+10020504		Hack
+10020505		Delay
+10020506		Burst

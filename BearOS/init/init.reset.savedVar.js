@@ -96,14 +96,57 @@ export async function main(ns) {
 	ns.write("BearOS/savedVar/10010606.txt", "true", "w");
 	ns.write("BearOS/savedVar/10010607.txt", "true", "w");
 	ns.write("BearOS/savedVar/10010608.txt", "true", "w");
-	
-	
+
 	// Hacknet options
 	ns.write("BearOS/savedVar/10040011.txt", 1, "w");
 	ns.write("BearOS/savedVar/10040012.txt", "Sell for Money", "w");
 	ns.write("BearOS/savedVar/10040013.txt", "", "w");
-	
-	
 
+	// Batcher ports
+
+	// Batcher 1
+
+	ns.write("BearOS/savedVar/10020101.txt", "phantasy", "w");
+	ns.write("BearOS/savedVar/10020102.txt", 2, "w");
+	ns.write("BearOS/savedVar/10020103.txt", 10, "w");
+	ns.write("BearOS/savedVar/10020104.txt", 1, "w");
+	ns.write("BearOS/savedVar/10020105.txt", 100, "w");
+	ns.write("BearOS/savedVar/10020106.txt", 100, "w");
+
+	// Batcher 2
+
+	ns.write("BearOS/savedVar/10020201.txt", "phantasy", "w");
+	ns.write("BearOS/savedVar/10020202.txt", 2, "w");
+	ns.write("BearOS/savedVar/10020203.txt", 10, "w");
+	ns.write("BearOS/savedVar/10020204.txt", 1, "w");
+	ns.write("BearOS/savedVar/10020205.txt", 100, "w");
+	ns.write("BearOS/savedVar/10020206.txt", 100, "w");
+
+	// Batcher 3
+
+	ns.write("BearOS/savedVar/10020301.txt", "phantasy", "w");
+	ns.write("BearOS/savedVar/10020302.txt", 2, "w");
+	ns.write("BearOS/savedVar/10020303.txt", 10, "w");
+	ns.write("BearOS/savedVar/10020304.txt", 1, "w");
+	ns.write("BearOS/savedVar/10020305.txt", 100, "w");
+	ns.write("BearOS/savedVar/10020306.txt", 100, "w");
+
+	// Batcher 4
+
+	ns.write("BearOS/savedVar/10020401.txt", "phantasy", "w");
+	ns.write("BearOS/savedVar/10020402.txt", 2, "w");
+	ns.write("BearOS/savedVar/10020403.txt", 10, "w");
+	ns.write("BearOS/savedVar/10020404.txt", 1, "w");
+	ns.write("BearOS/savedVar/10020405.txt", 100, "w");
+	ns.write("BearOS/savedVar/10020406.txt", 100, "w");
+
+	// Batcher 5
+
+	ns.write("BearOS/savedVar/10020501.txt", "phantasy", "w");
+	ns.write("BearOS/savedVar/10020502.txt", 2, "w");
+	ns.write("BearOS/savedVar/10020503.txt", 10, "w");
+	ns.write("BearOS/savedVar/10020504.txt", 1, "w");
+	ns.write("BearOS/savedVar/10020505.txt", 100, "w");
+	ns.write("BearOS/savedVar/10020506.txt", 100, "w");
 
 }

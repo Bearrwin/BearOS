@@ -85,10 +85,10 @@ export async function main(ns) {
 				//ns.exec("BearOS/ammo/cg1.single.js", (nextHost), (growThreads), (target), (addGMSec));
 
 
- 				if (sec == minSec && money == maxMoney){
+ 				if (sec < (minSec + 5) && money > (maxMoney * 0.5)){
  				ns.exec("BearOS/ammo/ch1.single.js", (nextHost), (hackThreads), (target));
 			}
-			if (sec == minSec) {
+			if (sec < (minSec +5)) {
 				ns.exec("BearOS/ammo/cg1.single.js", (nextHost), (growThreads), (target));
 			}
 			ns.exec("BearOS/ammo/cw1.single.js", (nextHost), (weakThreads), (target));

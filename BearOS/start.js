@@ -14,10 +14,9 @@ export async function main(ns) {
 		let cloudCurrQty = cloudQty(ns)
 		let buySize = 64
 		let cloudEndQty = cloudMaxQty
-		let cSize = 16384
+		let cSize = cloudMaxSize
 		let sf9 = ns.peek(10010109)
 		let currentCity = ns.getPlayer().city
-		let currWork = ns.singularity.getCurrentWork()
 
 		//let thisBN =
 		//let freshBN =
@@ -58,7 +57,7 @@ export async function main(ns) {
 	// Start sleeves working
 	ns.run("BearOS/sleeves/startwork.js");
 
-	if (sf99 < 3) {
+	if (sf9 < 3) {
 		ns.run("BearOS/work/uni.rothman.hack.js");
 		ns.print("You start studying Algorithms at Rothman University.")
 		await ns.sleep(500)
@@ -71,7 +70,7 @@ export async function main(ns) {
 	ns.run("BearOS/bot/bot.hacknet.sellhashes.js");
 	ns.run("BearOS/utils/selling.js");
 
-	while (ns.getServerMoneyAvailable("home") < 3000000) {
+	while (ns.getServerMoneyAvailable("home") < 38000000) {
 		await ns.sleep(1000)
 	}
 
@@ -92,7 +91,15 @@ export async function main(ns) {
 	}
 
 	if (!ns.fileExists("FTPCrack.exe", "home")) {
-		ns.run("BearOS/darkweb/darkweb.ssh.js");
+		ns.run("BearOS/darkweb/darkweb.ftp.js");
+	}
+
+	if (!ns.fileExists("relaySMTP.exe", "home")) {
+		ns.run("BearOS/darkweb/darkweb.smtp.js");
+	}
+
+	if (!ns.fileExists("HTTPWorm.exe", "home")) {
+		ns.run("BearOS/darkweb/darkweb.http.js");
 	}
 
 	ns.run("BearOS/worm/worm.nuke.js");
@@ -112,10 +119,10 @@ export async function main(ns) {
 					await ns.sleep(10000);
 			}
 			ns.print("Finished buying servers, we now have ",  + cloudCurrQty)
-
-			ns.exec("BearOS/cloud/cloud.upgtomax.loop.js", "home", 1, cSize)
-
 	}
+
+	ns.exec("BearOS/cloud/cloud.upgtomax.loop.js", "home", 1, cSize)
+	ns.exec("BearOS/batcher/batcher.test.js", "home", 1, "phantasy", 2, 10, 1, 100, 100)
 
 }
 
