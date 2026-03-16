@@ -16,7 +16,7 @@ export async function main(ns) {
 	let upgCost = ns.getPurchasedServerCost(nextUp) - ns.getPurchasedServerCost(serverRam);
 	let availMoney = ns.getServerMoneyAvailable("home");
 
-	await ns.sleep100);
+	await ns.sleep(100);
 
 	while (upgQty > 0) {
 
@@ -38,10 +38,10 @@ export async function main(ns) {
 			if (availMoney > upgCost) {
 				ns.upgradePurchasedServer(smallestServ, nextUp);
 				ns.print(`Upgraded ${smallestServ} from ${ns.formatRam(serverRam, 0)} to ${ns.formatRam(nextUp, 0)}, it cost ${ns.formatNumber(upgCost, 2)}`);
-				await ns.sleep(100);
+				await ns.sleep(10);
 				upgQty = upgCount(ns, maxRam);
 			}
-			await ns.sleep(2000);
+			await ns.sleep(20);
 		}
 	}
 	ns.print(`We ae done, I am outta here!`)

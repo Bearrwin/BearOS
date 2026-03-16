@@ -20,6 +20,13 @@ export async function main(ns) {
 
 	while (servCount < desiredQty) {
 		servCount = cloudQty(ns);
+		ns.print(`Next purchase is a ${ns.formatRam(ram, 0)} Gb server, it will cost ${ns.formatNumber(serverCost, 2)}`);
+
+		while (availMoney < serverCost) {
+			availMoney = ns.getServerMoneyAvailable("home");
+			ns.print(`Saving my pennies for the next upgrade, we have ${ns.formatNumber(availMoney, 2)} / ${ns.formatNumber(serverCost, 2)}`);
+			await ns.sleep(10000);
+		}
 
 		if (ns.getServerMoneyAvailable("home") > serverCost) {
 			ns.purchaseServer(serverName, (ram));
@@ -28,13 +35,9 @@ export async function main(ns) {
 			ns.run("FezOS/cloud/cloud.propagate.all.js");
 		}
 		availMoney = ns.getServerMoneyAvailable("home")
-		servCount = cloudQty(ns);
+			servCount = cloudQty(ns);
 		ns.print("You currently have " + servCount + " / " + desiredQty + " servers");
-		if (servCount < desiredQty) {
-			ns.print(`You have ${ns.formatNumber(availMoney)} / ${ns.formatNumber(serverCost)}`);
-			ns.print(` Waiting ${ns.tFormat(cycleDelay)} and trying again`);
-			await ns.sleep(cycleDelay);
-		}
+
 	}
 	ns.print(`We ae done, I am outta here!`);
 }
