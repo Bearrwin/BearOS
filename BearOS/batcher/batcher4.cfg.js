@@ -1,21 +1,21 @@
 /** @param {NS} ns */
 export async function main(ns) {
 
-	// run BearOS/batcher/batcher1.cfg.js phantasy 2 10 1 100 100
+	// run BearOS/batcher/batcher4.cfg.js phantasy 2 10 1 100 100
 
 	// ns.ui.openTail();
 	// ns.ui.resizeTail(300, 130);
 	// ns.ui.moveTail(1225, 485);
 	// ns.disableLog('ALL');
 
-	let currTarg = ns.peek(10020101);
-	let currWeak = ns.peek(10020102);
-	let currGrow = ns.peek(10020103);
-	let currHack = ns.peek(10020104);
-	let currDelay = ns.peek(10020105);
-	let currBurst = ns.peek(10020106);
+	let currTarg = ns.peek(10020401);
+	let currWeak = ns.peek(10020402);
+	let currGrow = ns.peek(10020403);
+	let currHack = ns.peek(10020404);
+	let currDelay = ns.peek(10020405);
+	let currBurst = ns.peek(10020406);
 
-	ns.print("Current config for batcher 1")
+	ns.print("Current config for batcher 4")
 	ns.print("Current target is " + currTarg)
 	ns.print("Current weaken threads are " + currWeak)
 	ns.print("Current grow threads are " + currGrow)
@@ -31,36 +31,36 @@ export async function main(ns) {
 		let cycleDelay = ns.args[4];
 		let burstSize = ns.args[5];
 
-		let _10020101 = hackTarget;
-		ns.clearPort(10020101);
-		ns.writePort(10020101, _10020101);
+		let _10020401 = hackTarget;
+		ns.clearPort(10020401);
+		ns.writePort(10020401, _10020401);
 
-		let _10020102 = weakThreads;
-		ns.clearPort(10020102);
-		ns.writePort(10020102, _10020102);
+		let _10020402 = weakThreads;
+		ns.clearPort(10020402);
+		ns.writePort(10020402, _10020402);
 
-		let _10020103 = growThreads;
-		ns.clearPort(10020103);
-		ns.writePort(10020103, _10020103);
+		let _10020403 = growThreads;
+		ns.clearPort(10020403);
+		ns.writePort(10020403, _10020403);
 
-		let _10020104 = hackThreads;
-		ns.clearPort(10020104);
-		ns.writePort(10020104, _10020104);
+		let _10020404 = hackThreads;
+		ns.clearPort(10020404);
+		ns.writePort(10020404, _10020404);
 
-		let _10020105 = cycleDelay;
-		ns.clearPort(10020105);
-		ns.writePort(10020105, _10020105);
+		let _10020405 = cycleDelay;
+		ns.clearPort(10020405);
+		ns.writePort(10020405, _10020405);
 
-		let _10020106 = burstSize;
-		ns.clearPort(10020106);
-		ns.writePort(10020106, _10020106);
+		let _10020406 = burstSize;
+		ns.clearPort(10020406);
+		ns.writePort(10020406, _10020406);
 
-		ns.write("BearOS/savedVar/10020101.txt", (_10020101), "w");
-		ns.write("BearOS/savedVar/10020102.txt", (_10020102), "w");
-		ns.write("BearOS/savedVar/10020103.txt", (_10020103), "w");
-		ns.write("BearOS/savedVar/10020104.txt", (_10020104), "w");
-		ns.write("BearOS/savedVar/10020105.txt", (_10020105), "w");
-		ns.write("BearOS/savedVar/10020106.txt", (_10020106), "w");
+		ns.write("BearOS/savedVar/10020401.txt", (_10020401), "w");
+		ns.write("BearOS/savedVar/10020402.txt", (_10020402), "w");
+		ns.write("BearOS/savedVar/10020403.txt", (_10020403), "w");
+		ns.write("BearOS/savedVar/10020404.txt", (_10020404), "w");
+		ns.write("BearOS/savedVar/10020405.txt", (_10020405), "w");
+		ns.write("BearOS/savedVar/10020406.txt", (_10020406), "w");
 
 	} else {
 
@@ -96,36 +96,36 @@ export async function main(ns) {
 				type: "text"
 			});
 
-			let _10020101 = hackTarget;
-			ns.clearPort(10020101);
-			ns.writePort(10020101, _10020101);
+			let _10020401 = hackTarget;
+			ns.clearPort(10020401);
+			ns.writePort(10020401, _10020401);
 
-			let _10020102 = weakThreads;
-			ns.clearPort(10020102);
-			ns.writePort(10020102, _10020102);
+			let _10020402 = weakThreads;
+			ns.clearPort(10020402);
+			ns.writePort(10020402, _10020402);
 
-			let _10020103 = growThreads;
-			ns.clearPort(10020103);
-			ns.writePort(10020103, _10020103);
+			let _10020403 = growThreads;
+			ns.clearPort(10020403);
+			ns.writePort(10020403, _10020403);
 
-			let _10020104 = hackThreads;
-			ns.clearPort(10020104);
-			ns.writePort(10020104, _10020104);
+			let _10020404 = hackThreads;
+			ns.clearPort(10020404);
+			ns.writePort(10020404, _10020404);
 
-			let _10020105 = cycleDelay;
-			ns.clearPort(10020105);
-			ns.writePort(10020105, _10020105);
+			let _10020405 = cycleDelay;
+			ns.clearPort(10020405);
+			ns.writePort(10020405, _10020405);
 
-			let _10020106 = burstSize;
-			ns.clearPort(10020106);
-			ns.writePort(10020106, _10020106);
+			let _10020406 = burstSize;
+			ns.clearPort(10020406);
+			ns.writePort(10020406, _10020406);
 
-			ns.write("BearOS/savedVar/10020101.txt", (_10020101), "w");
-			ns.write("BearOS/savedVar/10020102.txt", (_10020102), "w");
-			ns.write("BearOS/savedVar/10020103.txt", (_10020103), "w");
-			ns.write("BearOS/savedVar/10020104.txt", (_10020104), "w");
-			ns.write("BearOS/savedVar/10020105.txt", (_10020105), "w");
-			ns.write("BearOS/savedVar/10020106.txt", (_10020106), "w");
+			ns.write("BearOS/savedVar/10020401.txt", (_10020401), "w");
+			ns.write("BearOS/savedVar/10020402.txt", (_10020402), "w");
+			ns.write("BearOS/savedVar/10020403.txt", (_10020403), "w");
+			ns.write("BearOS/savedVar/10020404.txt", (_10020404), "w");
+			ns.write("BearOS/savedVar/10020405.txt", (_10020405), "w");
+			ns.write("BearOS/savedVar/10020406.txt", (_10020406), "w");
 
 		}
 	}
